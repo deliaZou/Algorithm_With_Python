@@ -34,14 +34,18 @@
 
 #### 基本功能
 
-| 功能                     | 描述                            |
-| ------------------------ | ------------------------------- |
-| Node.init                | 节点赋值，next=None             |
-| Linked_List.init         |                                 |
-| push进栈                 | 未超limit，加入list, Ot(1)      |
-| pop出栈                  | 栈若非空弹出顶部元素pop(),Ot(1) |
-| peek查看堆栈顶部元素     | 若非空，返回list[-1]            |
-| is_empty判断栈是否为空： | return not bool(self.stack)     |
-| size栈的大小：           | return len(self.stack)          |
+| 功能                          | 描述                                                         |
+| ----------------------------- | ------------------------------------------------------------ |
+| Node.init                     | self.data = data             self.next = None                |
+| Linked_List.init              | self.head = head                                             |
+| append(new_element)           | 向链表添加新的结点                                           |
+| is_empty()                    | 判断链表是否为空                                             |
+| insert(position, new_element) | 往链表中任意位置添加一个 new_element 元素。<br/>先判断要插入的位置是否在链表的索引范围内。 <br/>当插入的位置是头结点（即索引为 0）时，做特殊情况处理。<br/> 当要插入结点的位置不在 0 时，找到要插入的位置，插入新结点 |
+| remove(position)              | 从链表中任意位置删除一个元素。<br/>先判断要删除的元素索引是否存在，如果不存在抛出错误<br/>接着判断当存在链表元素时才能执行删除操作。<br/>当要删除的是头结点时（即索引为 0），做特殊情况处理。<br/>其他情况时，通过循环找到要删除的结点。<br/>最后要做的就是把这个结点删除掉。 |
+| get_length                    | 获取链表的长度                                               |
+| print_list                    | 遍历链表，并将元素依次打印出来                               |
+| reverse                       | 将链表反转                                                   |
+| initlist(data_list)           | 将列表转换为链表                                             |
+|                               |                                                              |
 
 #### 应用
