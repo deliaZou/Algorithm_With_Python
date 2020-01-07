@@ -21,10 +21,7 @@ class Linked_List:
         else:
             self.head = new_element
 
-    def insert(self, new_data):
-        new_node = Node(new_data)
-        new_node.next = self.head
-        self.head = new_node
+
 
     def is_empty(self):
         """
@@ -46,7 +43,7 @@ class Linked_List:
         # 返回链表的长度
         return length
 
-    def insert_1(self, position, new_element):
+    def insert(self, position, new_element):
         """
         在链表中指定索引处插入元素
         """
@@ -164,13 +161,18 @@ class Linked_List:
             D1.next = D2.next
             D2.next = temp
 
+    def insert1(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+
 if __name__ == '__main__':
     list = Linked_List()
-    list.insert(5)
-    list.insert(4)
-    list.insert(3)
-    list.insert(2)
-    list.insert(1)
+    list.insert1(5)
+    list.insert1(4)
+    list.insert1(3)
+    list.insert1(2)
+    list.insert1(1)
     list.print_list()
     list.swapNodes(1, 4)
     print("After swapping")
