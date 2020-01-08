@@ -5,6 +5,12 @@ class Node(object):
         self.left = None    #左子节点
         self.right = None   #右子节点
 
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 class Tree(object):
     def __init__(self):
         #根节点定义为 root 永不删除，作为哨兵使用
@@ -143,13 +149,33 @@ class Tree(object):
         right_item = self.preorder(node.right)
         return result + left_item + right_item
 
+    '''leet-code108'''
+    def sortedArrayToBST(self, nums):
+        if not nums:
+            return
+        root_index = len(nums) // 2  # //相除结果不保留小数，/相除保留小数
+        root = Node(nums[root_index])
+        root.left = self.sortedArrayToBST(nums[:root_index])
+        root.right = self.sortedArrayToBST(nums[root_index+1:])
+        return root
+
+
+
+
 if __name__ == '__main__':
-    t = Tree()
-    for i in range(1, 11):
-        t.add(i)
-    print('中序遍历:', t.inorder(t.root))
-    print('先序遍历:', t.preorder(t.root))
-    print('后序遍历:', t.postorder(t.root))
+    # t = Tree()
+    # for i in range(1, 11):
+    #     t.add(i)
+    # print('中序遍历:', t.inorder(t.root))
+    # print('先序遍历:', t.preorder(t.root))
+    # print('后序遍历:', t.postorder(t.root))
+
+    # a = Solution()
+    a = Tree()
+    b = a.sortedArrayToBST([-10,-3,0,5,9,12,16,18])
+    print(a.inorder(b))
+    # print(a.root.left.item)
+    # print(a.root.left)
 
 
 
