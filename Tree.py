@@ -5,12 +5,6 @@ class Node(object):
         self.left = None    #左子节点
         self.right = None   #右子节点
 
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
 class Tree(object):
     def __init__(self):
         #根节点定义为 root 永不删除，作为哨兵使用
@@ -159,17 +153,26 @@ class Tree(object):
         root.right = self.sortedArrayToBST(nums[root_index+1:])
         return root
 
+    '''leet-code104'''
+    def maxDepth(self, node):
+        if node is None:
+            return 0
+
+        left_item = self.maxDepth(node.left)
+        right_item = self.maxDepth(node.right)
+        return max(left_item, right_item) + 1
+
 
 
 
 if __name__ == '__main__':
-    # t = Tree()
-    # for i in range(1, 11):
-    #     t.add(i)
-    # print('中序遍历:', t.inorder(t.root))
-    # print('先序遍历:', t.preorder(t.root))
-    # print('后序遍历:', t.postorder(t.root))
-
+    t = Tree()
+    for i in range(1, 11):
+        t.add(i)
+    print('中序遍历:', t.inorder(t.root))
+    print('先序遍历:', t.preorder(t.root))
+    print('后序遍历:', t.postorder(t.root))
+    print(t.maxDepth(t.root))
     # a = Solution()
     a = Tree()
     b = a.sortedArrayToBST([-10,-3,0,5,9,12,16,18])

@@ -23,5 +23,19 @@ import Tree
 
 '''5-001[将有序数组转换为二叉搜索树](leet-code108)'''
 # a = Tree.Tree()
-# b = a.sortedArrayToBST([-10, -3, 0, 5, 9, 12, 16, 18])
-# print(a.inorder(b))
+# # b = a.sortedArrayToBST([-10, -3, 0, 5, 9, 12, 16, 18])
+# # print(a.inorder(b))
+
+'''5-002二叉树的最大深度(leet-code104)'''
+# a = Tree.Tree()
+# for i in range(1, 11):
+#     a.add(i)
+# print(a.maxDepth(a.root))
+
+'''1_002 最小栈(LeerCode 115)'''
+# a = Stack.MinStack()
+# for i in range(10):
+#     a.push(i)
+# print(a.getMin())
+
+

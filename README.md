@@ -137,6 +137,7 @@
 | 功能                   | 描述                                                         |
 | ---------------------- | ------------------------------------------------------------ |
 | sortedArrayToBST(list) | 5-001[将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)(leet-code108) |
+| maxDepth(root)         | 5-002二叉树的最大深度(leet-code104)                          |
 
 ### 6.TrieNode字典树
 
