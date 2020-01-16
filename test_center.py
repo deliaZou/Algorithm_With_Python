@@ -32,6 +32,12 @@ import Tree
 #     a.add(i)
 # print(a.maxDepth(a.root))
 
+'''5-003对称二叉树leet-code101'''
+# a = Tree.Tree()
+# for i in [ 2, 2, 3, 4, 4, 3]:
+#     a.add(i)
+# print(a.isSymmetric(a.root) )
+
 '''1_002 最小栈(LeerCode 115)'''
 # a = Stack.MinStack()
 # for i in range(10):

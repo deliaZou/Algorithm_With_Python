@@ -162,12 +162,29 @@ class Tree(object):
         right_item = self.maxDepth(node.right)
         return max(left_item, right_item) + 1
 
+    '''leet-code101'''
+    def isSymmetric(self, root) -> bool:
+        def check(ll, rr):
+            if not ll and not rr:
+                return True
+            elif not ll or not rr:
+                return False
+
+            if ll.item != rr.item:
+                return False
+
+            return check(ll.left, rr.right) and check(ll.right, rr.left)
+
+        return check(root, root)
+
 
 
 
 if __name__ == '__main__':
     t = Tree()
-    for i in range(1, 11):
+    # for i in range(1, 11):
+    #     t.add(i)
+    for i in [ 2, 2, 3, 4, 4, 3]:
         t.add(i)
     print('中序遍历:', t.inorder(t.root))
     print('先序遍历:', t.preorder(t.root))
@@ -179,7 +196,7 @@ if __name__ == '__main__':
     print(a.inorder(b))
     # print(a.root.left.item)
     # print(a.root.left)
-
+    print(t.isSymmetric(t.root))
 
 
 
