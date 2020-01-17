@@ -26,8 +26,8 @@
       <file leaf-file-name="Linked_List.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Linked_List.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2689">
-              <caret line="172" column="19" lean-forward="true" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="76" column="38" lean-forward="true" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -35,8 +35,8 @@
       <file leaf-file-name="Sort.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="421">
+              <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -90,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="665" />
     <option name="y" value="13" />
     <option name="width" value="1158" />
@@ -488,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Linked_List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2689">
-          <caret line="172" column="19" lean-forward="true" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2233">
@@ -505,10 +498,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Linked_List.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="76" column="38" lean-forward="true" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="421">
+          <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
         </state>
       </provider>
     </entry>
