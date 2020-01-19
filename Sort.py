@@ -1,5 +1,7 @@
 #coding = utf8
 import math
+import random
+
 '''1.冒泡排序'''
 def bubble_sort(sequence):
     for i in range(1, len(sequence)):
@@ -77,6 +79,52 @@ def quick_select(sequence):
     recursive(0, len(sequence) - 1)
     return  sequence
 
+'''7.堆排序'''
+def heap_sort(sequence):
+    def heap_adjust(parent):
+        child = 2 * parent + 1  #left child
+        while child < len(heap):
+            if child + 1 < len(heap):
+                if heap[child + 1] > heap[child]:
+                    child += 1 #right child
+            if heap[parent] >= heap[child]:
+                break
+            heap[parent],heap[child] = heap[child], heap[parent]
+            parent, child = child, 2 * child + 1
+    heap, sequence =sequence.copy(), []
+    for i in range(len(heap)//2, -1, -1):
+        heap_adjust(i)
+    while len(heap) != 0:
+        heap[0], heap[-1] = heap[-1], heap[0]
+        sequence.insert(0, heap.pop())
+        heap_adjust(0)
+    return sequence
+
+'''8.计数排序'''
+def counting_sort(sequence):
+    if sequence == []:
+        return []
+    sequence_len = len(sequence)
+    sequence_max = max(sequence)
+    sequence_min = min(sequence)
+    counting_arr_length = sequence_max - sequence_min + 1
+    counting_arr = [0] * counting_arr_length
+    for number in sequence:
+        counting_arr[number - sequence_min] += 1 #统计数组中元素出现的次数
+    print(counting_arr)
+    for i in range(1, counting_arr_length):
+        counting_arr[i] = counting_arr[i] + counting_arr[i-1]
+    print(counting_arr)
+    ordered = [0] *sequence_len
+    for i in range(sequence_len-1, -1, -1):
+        ordered[counting_arr[sequence[i]- sequence_min] - 1] = sequence[i]
+        counting_arr[sequence[i] - sequence_min] -= 1
+    return ordered
+
+
+
+
+
 
 if __name__ == '__main__':
     sequence = [12, 27, 46, 16, 25, 37, 22, 29, 15, 47, 48, 34]
@@ -86,3 +134,7 @@ if __name__ == '__main__':
     print('4.希尔排序结果', shell_sort(sequence))
     print('5.合并排序结果', merge_sort(sequence))
     print('6.快速排序结果',quick_select(sequence))
+    print('7.堆排序结果  ',heap_sort(sequence))
+    sequence = [2,3,4,7,2,4,3,2,3]
+    print('sequence =', [2,3,4,7,2,4,3,2,3])
+    print('8.计数排序结果',counting_sort(sequence))

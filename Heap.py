@@ -59,7 +59,15 @@ class heap(object):
 
 if __name__ == '__main__':
     myheap = heap()
-    for i in range(10):
-        myheap.insert(i + 1)
-    print('建堆:', myheap.data_list)
-    print("删除堆顶元素：", [myheap.removeMax() for _ in range(10)])
+    # for i in range(10):
+    #     myheap.insert(i + 1)
+    # print('建堆:', myheap.data_list)
+    # print("删除堆顶元素：", [myheap.removeMax() for _ in range(10)])
+    heap_1 = heap()
+    list_a = [8,3,5,1,2,6]
+    for i in list_a:
+        heap_1.insert(i)
+    print(heap_1.data_list)
+    heap_1.removeMax()
+
+    print(heap_1.data_list)

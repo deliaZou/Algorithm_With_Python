@@ -409,44 +409,6 @@ b.第N+1位与前一位比较大小，若N+1小，则交换，再与前一位比
 
 #### ⑥插入排序
 
-#### ⑦堆排序
-
-一，复制list，将list堆化，大顶堆
-
-二，将堆化list首尾元素调换，此时尾部元素为最大值，尾部元素pop出来，插入返回list的第0位
-
-三，将list重新堆化，重复一二三直到list为空
-
-*堆的性质，首先，是近似完全二叉树，其次，以大顶堆为例，所有子节点元素均小于父节点元素。
-
-#### ⑧计数排序
-
-一，求list的长度len，最大值max，最小值min
-
-二，新list B长度为max-min+1
-
-​		遍历list A，求出list A中不同元素的次数，listB的index映射listA元素值，方法number - sequence_min
-
-三，list B累加
-
-四，新建返回list R 长度为len （[0] * len)
-
-五，遍历list A
-
-将遍历到的元素放置位置为：映射方法求出ListB 的index后的值-1
-
-listB对应index的值-1
-
-​	ordered[counting_arr[sequence[i]- sequence_min] - 1] = sequence[i]  ***
-
-​	counting_arr[sequence[i] - sequence_min] -= 1 ***
-
-#### ⑨桶排序*
-
-#### ⑩应用
-
-
-
 
 
 
